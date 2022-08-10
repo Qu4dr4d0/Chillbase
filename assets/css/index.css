@@ -192,6 +192,7 @@ body {
 
 
 .svg-wave-1 {
+  background-color: #fff;
   margin-bottom: -4px;
 }
 
@@ -205,6 +206,11 @@ body {
   background-color: #363946;
   margin-bottom: -5px;
   transform: rotatex(180deg);
+}
+
+.svg-wave-4 {
+  background-color: #363946;
+  margin-bottom: -5px;
 }
 
 
@@ -1459,6 +1465,44 @@ body {
 /*======================== FOOTER?? ========================*/
 /*========================================================*/
 
+.footer-body {
+  height: 250px;
+  color: #f1f1f1;
+  background-color: #0f0f0f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.footer-body h2 {
+  color: #f1f1f1;
+  margin: 0px;
+  font-size: 35px;
+}
+
+.footer-p-1 {
+  font-size: 15px;
+}
+
+.social_medias-body img {
+  width: 25px;
+  height: 25px;
+}
+
+.social_medias-body {
+  margin: 0 10px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content:center;
+  gap: 15px;
+}
+
+.footer-p-2 {
+  color: #5d5d64;
+}
 
 
 

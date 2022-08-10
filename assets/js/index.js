@@ -1,4 +1,22 @@
-AOS.init({
-  duration: 3000,
-  once: true,
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*========== FOOTER ===========*/
+let year = new Date().getFullYear();
+let month = new Date().getMonth() + 1;
+let day = new Date().getDate();

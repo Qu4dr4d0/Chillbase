@@ -8,8 +8,9 @@
 
   <title>Chillbase</title>
   
-
+  <script src="index.js"></script>
   <link rel="stylesheet" href="./assets/css/index.css">
+
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,29 +20,30 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;600&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 
 </head>
 <body>
-  <header class="header" data-aos="fade-in">
+  <header id="header" class="header" data-aos="fade-down" data-aos-duration="1500" >
     <h1 class="logo">CHILLBASE</h1>
       <nav class="navigation-bar">
-        <a href="#about" class="about aaa">About Us</a>
+        <a href="#about" class="about aaa">About</a>
         <a href="#features" class="features aaa">Features</a>
         <a href="#products" class="products aaa">Products</a>
       </nav>
-      <button class="contact-button">Contacts</button>
+      <button class="contact-button">Contact</button>
   </header>
     <main class="main" id="main">
-      <div class="introduction-container">
+      <div class="introduction-container" data-aos="zoom-in-down" data-aos-duration="1500">
         <div class="h2-title">
           <h2>Meet Chillbase</h2>
         </div>
         <p>Feeling a little stressed today? Don't worry, we are here to help you!
           Chillbase is a website where you can listen to a variety of audios that will leave you in the clouds…
-          So choose one of our audios, put your headphone and get ready to relax.
-          Your best ideas come when you are calm.</p>
+          So choose one of our audios, put your headphone and get ready to relax.</p>
       </div>
 
 
@@ -69,9 +71,9 @@
         <!------------------------------------------------>
 
       <div class="weather-background">
-        <section class="weather-div-introduction">
-          <h2>Weather Sondscapes</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas maiores nemo porro optio harum? Voluptatum magnam aut, repellat omnis quasi quam voluptates possimus quisquam, doloremque aliquid dicta iure dolore harum.</p>
+        <section class="weather-div-introduction" data-aos="fade-right" data-aos-duration="1000">
+          <h2 >Weather Sondscapes</h2>
+          <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas maiores nemo porro optio harum? Voluptatum magnam aut, repellat omnis quasi quam voluptates possimus quisquam, doloremque aliquid dicta iure dolore harum.</p>
         </section>
 
 
@@ -82,7 +84,7 @@
         <!------------------------------------------------>
 
          <!--
-        <article id="light_rain" class="weather-div-card-light_rain-container">
+        <article data-aos="flip-up" data-aos-duration="1000" id="light_rain" class="weather-div-card-light_rain-container">
           <div class="weather-div-card-light_rain-header">
             <h2>Light Rain</h2>
             <p class="weather-div-card-light_rain-header-p">💧</p>
@@ -113,7 +115,7 @@
         <!-------------- CARD HEAVY RAIN ----------------->
         <!------------------------------------------------>
         
-        <article id="heavy_rain" class="weather-div-card-heavy_rain-container">
+        <article data-aos="flip-up" data-aos-duration="1000" id="heavy_rain" class="weather-div-card-heavy_rain-container">
           <div class="weather-div-card-heavy_rain-header">
             <h2>Heavy Rain</h2>
             <p class="weather-div-card-heavy_rain-header-p">⚡</p>
@@ -143,7 +145,7 @@
         <!----------------- WINTER WIND ------------------>
         <!------------------------------------------------>
         <!--
-        <article id="winter_wind" class="weather-div-card-winter_wind-container">
+        <article data-aos="flip-up" data-aos-duration="1000" id="winter_wind" class="weather-div-card-winter_wind-container">
           <div class="weather-div-card-winter_wind-header">
             <h2>Winter Wind</h2>
             <p class="weather-div-card-winter_wind-header-p">🍃</p>
@@ -195,7 +197,7 @@
         <!------------------------------------------------>
       
       <div class="nature-div-background">
-        <section class="nature-div-introduction">
+        <section class="nature-div-introduction" data-aos="fade-left" data-aos-duration="1000">
           <h2>Nuture Sondscapes</h2>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas maiores nemo porro optio harum? Voluptatum magnam aut, repellat omnis quasi quam voluptates possimus quisquam, doloremque aliquid dicta iure dolore harum.</p>
         </section>
@@ -207,7 +209,7 @@
         <!-------------- CARD DEEP JUNGLE ---------------->
         <!------------------------------------------------>
 
-        <article id="deep_jungle" class="nature-div-card-deep_jungle-container">
+        <article data-aos="flip-down" data-aos-duration="1000" id="deep_jungle" class="nature-div-card-deep_jungle-container">
           <div class="nature-div-card-deep_jungle-header">
             <h2>Deep Jungle</h2>
             <p class="nature-div-card-deep_jungle-header-p">🐒</p>
@@ -236,7 +238,7 @@
         <!----------------- CARD OCEAN ------------------->
         <!------------------------------------------------>
         <!--
-        <article id="ocean" class="nature-div-card-ocean-container">
+        <article data-aos="flip-down" data-aos-duration="1000" id="ocean" class="nature-div-card-ocean-container">
           <div class="nature-div-card-ocean-header">
             <h2>Ocean</h2>
             <p class="nature-div-card-ocean-header-p">🦑</p>
@@ -266,7 +268,7 @@
         <!------------------- FOREST --------------------->
         <!------------------------------------------------>
         <!--
-        <article id="forest" class="nature-div-card-forest-container">
+        <article data-aos="flip-down" data-aos-duration="1000" id="forest" class="nature-div-card-forest-container">
           <div class="nature-div-card-forest-header">
             <h2>Forest</h2>
             <p class="nature-div-card-forest-header-p">🌿</p>
@@ -313,7 +315,7 @@
         <!------------------------------------------------>
       
       <div class="urban-background">
-        <section class="urban-div-introduction">
+        <section class="urban-div-introduction" data-aos="fade-right" data-aos-duration="1000">
           <h2>Urban Soundscapes</h2>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas maiores nemo porro optio harum? Voluptatum magnam aut, repellat omnis quasi quam voluptates possimus quisquam, doloremque aliquid dicta iure dolore harum.</p>
         </section>
@@ -325,7 +327,7 @@
         <!------------------ CARD CITY -------------------->
         <!------------------------------------------------>
        
-        <article  id="city" class="urban-div-card-city-container">
+        <article data-aos="flip-left" data-aos-duration="1000" id="city" class="urban-div-card-city-container">
           <div class="urban-div-card-city-header">
             <h2>City</h2>
             <p class="urban-div-card-city-header-p">🌃</p>
@@ -354,7 +356,7 @@
         <!--------------- CARD BUSY PLACE ---------------->
         <!------------------------------------------------>
         <!--
-        <article id="busy_place" class="urban-div-card-busy_place-container">
+        <article data-aos="flip-left" data-aos-duration="1000" id="busy_place" class="urban-div-card-busy_place-container">
           <div class="urban-div-card-busy_place-header">
             <h2>Busy Place</h2>
             <p class="urban-div-card-busy_place-header-p">🍸</p>
@@ -377,9 +379,41 @@
         </article>    
       </div> 
       -->
+      
 
 
 
     </main>
+
+
+
+ 
+    <svg class="svg-wave-4" viewBox="0 0 100 9.4" >
+      <defs>
+           <pattern id="Wave-4"
+                  x="0" y="0" width="100" height="25"
+                  patternUnits="userSpaceOnUse"  >
+                 <path d="M0 25 0 6C20 9 38 11 55 7 72 4 87 4 100 6l0 19z" id="path4" fill="#0f0f0f"/>
+           </pattern>
+        </defs>
+       <rect width="100%" height="100%" fill="url(#Wave-4)" />
+     </svg> 
+
+
+
+
+    <footer class="footer-body" id="footer">
+      <h2 class="footer-h2">CHILLBASE</h2>
+      <p class="footer-p-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates hic quia blanditiis quo fuga.!</p>
+      <div class="social_medias-body">
+        <a href="https://www.linkedin.com/in/jo%C3%A3o-quadrado-5ba144194/" target="_blank"><img src="./assets/imgs/linkedin.png" alt="linkedin"></a>
+        <a href="https://github.com/Qu4dr4d0" target="_blank"><img src="./assets/imgs/github.png" alt="github"></a>
+        <a href="mailto:quadrado14@gmail.com"><img src="./assets/imgs/gmail.png" alt="gmail"></a>
+        <a href="https://www.instagram.com/quadradoo_/?hl=en" target="_blank"><img src="./assets/imgs/instagram.png" alt="instagram"></a>
+      </div>
+      <p class="footer-p-2">Copyright &copy2021 Chillbase - by Quadrado</p> 
+    </footer>
 </body>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script> AOS.init()</script>
 </html>
