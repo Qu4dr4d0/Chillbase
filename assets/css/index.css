@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   padding: 0px;
   margin-left: 0;
@@ -6,7 +10,7 @@
 }
 
 body {
-  margin-top: 75px;
+  margin-top: 40px;
   height: 100vh;
   width: 100%;
   text-decoration: none;
@@ -169,10 +173,13 @@ body {
 /*========================================================*/
 
 .introduction-container {
-  padding: 30px 8% 0 8%;
+  padding: 0px 8% 0 8%;
   height: 575px;
   background-color: #fff;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .h2-title {
@@ -188,16 +195,56 @@ body {
 }
 
 
+.buttom-start-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 40px;
+  width: 180px;
+  background-color: #fff;
+  border-radius: 25px;
+  border: solid rgba(214, 45, 141,0.6);
+  transition: all 0.3s ease 0s;
+}
+
+.buttom-start-container a {
+  text-decoration: none;
+  color: rgba(214, 45, 141,0.6);
+  font-weight: 600;
+  text-align: center;
+  font-size: large;
+
+}
+
+
+
+
+.buttom-start-container:hover {
+  color: rgba(214, 45, 141, 1) ;
+  border-color: rgba(214, 45, 141, 1);
+  transform: scale(1.1);
+}
+.buttom-start-container a:hover {
+  color: rgba(214, 45, 141, 1) ;
+  border-color: rgba(214, 45, 141, 1);
+
+}
+
+
+
+
 
 
 
 .svg-wave-1 {
   background-color: #fff;
-  margin-bottom: -4px;
+  margin-bottom: -5px;
 }
 
 .svg-wave-2 {
-  background-color: #22725E;
+  background-color: #67BC48;
   margin-bottom: -5px;
   transform: rotatex(180deg);
 }
@@ -221,9 +268,6 @@ body {
 /*========================================================*/
 /*========================================================*/
 /*========================================================*/
-/*===================== WEATHER AREA =====================*/
-/*========================================================*/
-/*========================================================*/
 /*============== INTRODUCTION WEATHER AREA ===============*/
 /*========================================================*/
 
@@ -233,7 +277,7 @@ body {
   height: 650px;
   background-color: #1B91A1;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   color: #fff;
 }
@@ -253,6 +297,80 @@ body {
   letter-spacing: -1px;
 }
 
+.weather-div-cards-container {
+  width: 500px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.weather-div-cards-container:hover .card {
+  opacity: 0.5;
+  filter: blur(3px);
+  transition: all 0.5s ease 0s;
+}
+
+.weather-div-cards-container .card:hover {
+  opacity: 1;
+  filter: blur(0px);
+  transform: scale(1.1);
+  
+}
+
+
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+
+.card, .bbb {
+  background-color: transparent;
+  border: none;
+  width: 350px;
+  height: 80px;
+  border-radius: 50px; 
+}
+
+.bbb {
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(1, -0, 0, -1) 0s;
+}
+
+.bbb:hover {
+  opacity: 1;
+  transform: translatey(5px);
+ 
+
+}
+
+
+
+.card .bbb .play_icon {
+  padding-bottom: 10px;
+  cursor: pointer;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  transition: all 0.3s;
+}
+
+.card .bbb .play_icon:hover {
+  color: rgba(214, 45, 141, 1);
+  transform: scale(1.2);
+
+}
+
+
+
+
+
+
+
 
 
 
@@ -260,426 +378,48 @@ body {
 /*=================== CARD LIGHT RAIN ====================*/
 /*========================================================*/
 
-.weather-div-card-light_rain-container {
-  background-color: #436288;
-  height: 400px;
-  width: 300px;
-  border: 2px solid #000;
-  border-radius: 20px;
-  box-shadow: #000 10px 10px 0 0;
-  color: #000;
-  font-weight: 600;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.weather-div-card-light_rain-header {
-  color: #fff;
-  background-color: #436288;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  height: 50px;
-  width: 296px;
-  padding: 0 20px;
-  text-align: start;
-  border-bottom: 2px solid #000;
-}
-
-.weather-div-card-light_rain-header h2, .weather-div-card-light_rain-header-p {
-  font-size: 25px;
-}
-
-.weather-div-card-light_rain-body {
-  background-color: #7296C2;
-  height: 347px;
-  width: 296px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-
-.weather-div-card-light_rain-img {
-  margin: 13px;
-  height: 150px;
-  width: 270px;
-  border-radius: 5px;
+.container-light_rain {
+  border: none;
+  width: 350px;
+  height: 80px;
+  background-image: url(../imgs/light-rain.jpg);
+  background-position-y: -55px;
   background-size: cover;
-  border: 2px solid #000;
-}
-
-.weather-div-card-light_rain-img img{
-  height: 100%;
-  width: 100%;
-}
-
-
-
-.weather-div-card-light_rain-description {
-  color: #f1f1f1;
-  margin: 0 13px;
-  font-size: 12px;
-  font-weight: 200;
-  text-align: center;
-}
-
-.weather-div-card-light_rain-buttom-container {
-  margin: 13px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.weather-div-card-light_rain-buttom-play_pause {
-  margin: 8px 0;
-  width: 200px;
-  color: #f1f1f1;
-  background-color: #436288;
-  border: 2px solid #000;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 18px;
-  height: 55px;
-  transition: all 0.3s ease 0s;
-}
-
-.weather-div-card-light_rain-buttom-play_pause:hover {
-  background-color: rgb(255, 180, 228);
-  transform: scale(1.1);
-  color: #000;
-}
-
-.weather-div-card-light_rain-previous_next-buttom-container {
-  display: flex;
-  justify-content: space-around;
-}
-
-.weather-div-card-light_rain-buttom-next {
-  color: #fff;
-  background-color: #436288;
-  width: 90px;
-  height: 50px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   border-radius: 50px;
-  box-shadow: #000 4px 4px 0 0;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 18px;
-  transition: all 0.3s ease 0s;
 }
-
-.weather-div-card-light_rain-buttom-next:hover {
-  background-color: rgb(255, 180, 228);
-  transform: scale(1.1);
-  color:#000;
-}
-
-.weather-div-card-light_rain-buttom-previous {
-  color: #f1f1f1;
-  background-color: #436288;
-  width: 90px;
-  height: 50px;
-  border-radius: 50px;
-  box-shadow: #000 4px 4px 0 0;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 18px;
-  transition: all 0.3s ease 0s;
-}
-
-.weather-div-card-light_rain-buttom-previous:hover {
-  color: #000;
-  background-color: rgb(255, 180, 228);
-  transform: scale(1.1)
-}
-
-
-
 
 /*========================================================*/
 /*=================== CARD HEAVY RAIN ====================*/
 /*========================================================*/
 
-.weather-div-card-heavy_rain-container {
-  background-color: #3D426B;
-  height: 400px;
-  width: 300px;
-  border: 2px solid #000;
-  border-radius: 20px;
-  box-shadow: #000 10px 10px 0 0;
-  font-weight: 600;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.weather-div-card-heavy_rain-header {
-  color: #fff;
-  background-color: #3D426B;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  height: 50px;
-  width: 296px;
-  padding: 0 20px;
-  text-align: start;
-  border-bottom: 2px solid #000;
-}
-
-.weather-div-card-heavy_rain-header h2, .weather-div-card-heavy_rain-header-p {
-  font-size: 25px;
-}
-
-.weather-div-card-heavy_rain-body {
-  background-color: #777B97;
-  height: 347px;
-  width: 296px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-
-.weather-div-card-heavy_rain-img {
-  margin: 13px;
-  height: 150px;
-  width: 270px;
-  border-radius: 5px;
+.container-heavy_rain {
+  border: none;
+  width: 350px;
+  height: 80px;
+  background-image: url(../imgs/heavy-rain.jpg);
+  background-position-y: -110px;
   background-size: cover;
-  border: 2px solid #000;
-}
-
-.weather-div-card-heavy_rain-img img{
-  height: 100%;
-  width: 100%;
-}
-
-
-
-.weather-div-card-heavy_rain-description {
-  color: #fff;
-  margin: 0 13px;
-  font-size: 12px;
-  font-weight: 200;
-  text-align: center;
-}
-
-.weather-div-card-heavy_rain-buttom-container {
-  margin: 13px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.weather-div-card-heavy_rain-buttom-play_pause {
-  margin: 8px 0;
-  width: 200px;
-  color: #fff;
-  background-color: rgb(61, 66, 107);
-  border: 2px solid #000;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 18px;
-  height: 55px;
-  transition: all 0.3s ease 0s;
-}
-
-.weather-div-card-heavy_rain-buttom-play_pause:hover {
-  background-color: rgb(255, 180, 228);
-  transform: scale(1.1);
-  color: #000;
-}
-
-.weather-div-card-heavy_rain-previous_next-buttom-container {
-  display: flex;
-  justify-content: space-around;
-}
-
-.weather-div-card-heavy_rain-buttom-next {
-  background-color: rgba(61, 66, 107, 1);
-  color: #fff;
-  width: 90px;
-  height: 50px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  margin-left: 50px;
   border-radius: 50px;
-  box-shadow: #000 4px 4px 0 0;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 18px;
-  transition: all 0.3s ease 0s;
 }
-
-.weather-div-card-heavy_rain-buttom-next:hover {
-  background-color: rgb(255, 180, 228);
-  transform: scale(1.1);
-  color: #000;
-}
-
-.weather-div-card-heavy_rain-buttom-previous {
-  background-color: rgba(61, 66, 107, 1);
-  color: #fff;
-  width: 90px;
-  height: 50px;
-  border-radius: 50px;
-  box-shadow: #000 4px 4px 0 0;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 18px;
-  transition: all 0.3s ease 0s;
-}
-
-.weather-div-card-heavy_rain-buttom-previous:hover {
-  background-color: rgb(255, 180, 228);
-  transform: scale(1.1);
-  color: #000;
-}
-
-
-
 
 /*========================================================*/
 /*=================== CARD WINTER WIND ===================*/
 /*========================================================*/
 
-.weather-div-card-winter_wind-container {
-  background-color: #5F66B1;
-  height: 400px;
-  width: 300px;
-  border: 2px solid #000;
-  border-radius: 20px;
-  box-shadow: #000 10px 10px 0 0;
-  color: #000;
-  font-weight: 600;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.weather-div-card-winter_wind-header {
-  color: #fff;
-  background-color: #5F66B1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  height: 50px;
-  width: 296px;
-  padding: 0 20px;
-  text-align: start;
-  border-bottom: 2px solid #000;
-}
-
-.weather-div-card-winter_wind-header h2, .weather-div-card-winter_wind-header-p {
-  font-size: 25px;
-}
-
-.weather-div-card-winter_wind-body {
-  background-color: #939AC8;
-  height: 347px;
-  width: 296px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-
-.weather-div-card-winter_wind-img {
-  margin: 13px;
-  height: 150px;
-  width: 270px;
-  border-radius: 5px;
+.container-winter_wind {
+  border: none;
+  width: 350px;
+  height: 80px;
+  background-image: url(../imgs/winter.jpg);
+  background-position-y: -5px;
   background-size: cover;
-  border: 2px solid #000;
-}
-
-.weather-div-card-winter_wind-img img{
-  height: 100%;
-  width: 100%;
-}
-
-
-
-.weather-div-card-winter_wind-description {
-  color: #fff;
-  margin: 0 13px;
-  font-size: 12px;
-  font-weight: 200;
-  text-align: center;
-}
-
-.weather-div-card-winter_wind-buttom-container {
-  margin: 13px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.weather-div-card-winter_wind-buttom-play_pause {
-  margin: 8px 0;
-  width: 200px;
-  color: #f1f1f1;
-  background-color: rgb(95, 102, 177);
-  border: 2px solid #000;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 18px;
-  height: 55px;
-  transition: all 0.3s ease 0s;
-}
-
-.weather-div-card-winter_wind-buttom-play_pause:hover {
-  background-color: rgb(255, 180, 228);
-  transform: scale(1.1);
-  color: #000;
-}
-
-.weather-div-card-winter_wind-previous_next-buttom-container {
-  display: flex;
-  justify-content: space-around;
-}
-
-.weather-div-card-winter_wind-buttom-next {
-  background-color: rgba(95, 102, 177, 1);
-  color: #fff;
-  width: 90px;
-  height: 50px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  margin-right: 50px;
   border-radius: 50px;
-  box-shadow: #000 4px 4px 0 0;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 18px;
-  transition: all 0.3s ease 0s;
 }
-
-.weather-div-card-winter_wind-buttom-next:hover {
-  background-color: rgb(255, 180, 228);
-  transform: scale(1.1);
-  color: #000;
-}
-
-.weather-div-card-winter_wind-buttom-previous {
-  background-color: rgba(95, 102, 177, 1);
-  color: #fff;
-  width: 90px;
-  height: 50px;
-  border-radius: 50px;
-  box-shadow: #000 4px 4px 0 0;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 18px;
-  transition: all 0.3s ease 0s;
-}
-
-.weather-div-card-winter_wind-buttom-previous:hover {
-  background-color: rgb(255, 180, 228);
-  transform: scale(1.1);
-  color: #000;
-}
-
-
-
 
 
 
@@ -688,14 +428,14 @@ body {
 /*=============== INTRODUCTION NATURE AREA ===============*/
 /*========================================================*/
 
-.nature-div-background {
+.nature-background {
   padding: 0 8%;
   height: 650px;
-  background-color: #22725E;
+  background-color: #67BC48;
   display: flex;
-  justify-content: space-around;
+  flex-direction: row-reverse;
+  justify-content: space-between;
   align-items: center;
-  flex-direction:row-reverse;
   color: #fff;
 }
 
@@ -714,430 +454,76 @@ body {
   letter-spacing: -1px;
 }
 
-
-
-
-/*========================================================*/
-/*=================== CARD DEEP JUNGLE ===================*/
-/*========================================================*/
-
-.nature-div-card-deep_jungle-container {
-  background-color: #528042;
-  height: 400px;
-  width: 300px;
-  border: 2px solid #000;
-  border-radius: 20px;
-  box-shadow: #000 10px 10px 0 0;
-  color: #000;
-  font-weight: 600;
+.nature-div-cards-container {
+  width: 400px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.nature-div-card-deep_jungle-header {
-  color: #fff;
-  background-color: #528042;
-  display: flex;
-  align-items: center;
   justify-content: space-between;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  height: 50px;
-  width: 296px;
-  padding: 0 20px;
-  text-align: start;
-  border-bottom: 2px solid #000;
 }
 
-.nature-div-card-deep_jungle-header h2, .nature-div-card-deep_jungle-header-p {
-  font-size: 25px;
+.nature-div-cards-container:hover .card {
+  opacity: 0.5;
+  filter: blur(3px);
+  transition: all 0.5s ease 0s;
 }
 
-.nature-div-card-deep_jungle-body {
-  background-color: #78BC61;
-  height: 347px;
-  width: 296px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-
-.nature-div-card-deep_jungle-img {
-  margin: 13px;
-  height: 150px;
-  width: 270px;
-  border-radius: 5px;
-  background-size: cover;
-  border: 2px solid #000;
-}
-
-.nature-div-card-deep_jungle-img img{
-  height: 100%;
-  width: 100%;
-}
-
-
-
-.nature-div-card-deep_jungle-description {
-  color: #fff;
-  margin: 0 13px;
-  font-size: 12px;
-  font-weight: 200;
-  text-align: center;
-}
-
-.nature-div-card-deep_jungle-buttom-container {
-  margin: 13px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.nature-div-card-deep_jungle-buttom-play_pause {
-  margin: 8px 0;
-  width: 200px;
-  color: #f1f1f1;
-  background-color: #528042;
-  border: 2px solid #000;
-  border-radius: 10px;
-  color: #fff;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 18px;
-  height: 55px;
-  transition: all 0.3s ease 0s;
-}
-
-.nature-div-card-deep_jungle-buttom-play_pause:hover {
-  background-color: rgb(255, 180, 228);
+.nature-div-cards-container .card:hover {
+  opacity: 1;
+  filter: blur(0px);
   transform: scale(1.1);
-  color: #000;
-}
-
-.nature-div-card-deep_jungle-previous_next-buttom-container {
-  display: flex;
-  justify-content: space-around;
-}
-
-.nature-div-card-deep_jungle-buttom-next {
-  background-color: #528042;
-  color: #fff;
-  width: 90px;
-  height: 50px;
-  border-radius: 50px;
-  box-shadow: #000 4px 4px 0 0;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 18px;
-  transition: all 0.3s ease 0s;
-}
-
-.nature-div-card-deep_jungle-buttom-next:hover {
-  background-color: rgb(255, 180, 228);
-  transform: scale(1.1);
-  color: #000;
-}
-
-.nature-div-card-deep_jungle-buttom-previous {
-  background-color: #528042;
-  color: #fff;
-  width: 90px;
-  height: 50px;
-  border-radius: 50px;
-  box-shadow: #000 4px 4px 0 0;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 18px;
-  transition: all 0.3s ease 0s;
-}
-
-.nature-div-card-deep_jungle-buttom-previous:hover {
-  background-color: rgb(255, 180, 228);
-  transform: scale(1.1);
-  color: #000;
+  
 }
 
 
 
 
 /*========================================================*/
-/*====================== CARD OCEAN ======================*/
+/*================== CARD DEEP JUNGLE ====================*/
 /*========================================================*/
 
-.nature-div-card-ocean-container {
-  background-color: #0D6E65;
-  height: 400px;
-  width: 300px;
-  border: 2px solid #000;
-  border-radius: 20px;
-  box-shadow: #000 10px 10px 0 0;
-  color: #000;
-  font-weight: 600;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.nature-div-card-ocean-header {
-  color: #fff;
-  background-color: #0D6E65;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  height: 50px;
-  width: 296px;
-  padding: 0 20px;
-  text-align: start;
-  border-bottom: 2px solid #000;
-}
-
-.nature-div-card-ocean-header h2, .nature-div-card-ocean-header-p {
-  font-size: 25px;
-}
-
-.nature-div-card-ocean-body {
-  background-color: #17C3B2;
-  height: 347px;
-  width: 296px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-
-.nature-div-card-ocean-img {
-  margin: 13px;
-  height: 150px;
-  width: 270px;
-  border-radius: 5px;
+.container-deep_jungle {
+  border: none;
+  width: 350px;
+  height: 80px;
+  background-image: url(../imgs/jungle.jpg);
+  background-position-y: -40px;
   background-size: cover;
-  border: 2px solid #000;
-}
-
-.nature-div-card-ocean-img img{
-  height: 100%;
-  width: 100%;
-}
-
-
-
-.nature-div-card-ocean-description {
-  color: #fff;
-  margin: 0 13px;
-  font-size: 12px;
-  font-weight: 200;
-  text-align: center;
-}
-
-.nature-div-card-ocean-buttom-container {
-  margin: 13px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.nature-div-card-ocean-buttom-play_pause {
-  margin: 8px 0;
-  width: 200px;
-  color: #f1f1f1;
-  background-color: #0D6E65;
-  border: 2px solid #000;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 18px;
-  height: 55px;
-  transition: all 0.3s ease 0s;
-}
-
-.nature-div-card-ocean-buttom-play_pause:hover {
-  background-color: rgb(255, 180, 228);
-  transform: scale(1.1);
-  color: #000;
-}
-
-.nature-div-card-ocean-previous_next-buttom-container {
-  display: flex;
-  justify-content: space-around;
-}
-
-.nature-div-card-ocean-buttom-next {
-  background-color: #0D6E65;
-  color: #fff;
-  width: 90px;
-  height: 50px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   border-radius: 50px;
-  box-shadow: #000 4px 4px 0 0;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 18px;
-  transition: all 0.3s ease 0s;
 }
-
-.nature-div-card-ocean-buttom-next:hover {
-  background-color: rgb(255, 180, 228);
-  transform: scale(1.1);
-  color: #000;
-}
-
-.nature-div-card-ocean-buttom-previous {
-  background-color: #0D6E65;
-  color: #fff;
-  width: 90px;
-  height: 50px;
-  border-radius: 50px;
-  box-shadow: #000 4px 4px 0 0;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 18px;
-  transition: all 0.3s ease 0s;
-}
-
-.nature-div-card-ocean-buttom-previous:hover {
-  background-color: rgb(255, 180, 228);
-  transform: scale(1.1);
-  color: #000;
-}
-
-
-
 
 /*========================================================*/
 /*===================== CARD FOREST ======================*/
 /*========================================================*/
 
-.nature-div-card-forest-container {
-  background-color: #004F2D;
-  height: 400px;
-  width: 300px;
-  border: 2px solid #000;
-  border-radius: 20px;
-  box-shadow: #000 10px 10px 0 0;
-  color: #000;
-  font-weight: 600;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.nature-div-card-forest-header {
-  color: #fff;
-  background-color: #004F2D;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  height: 50px;
-  width: 296px;
-  padding: 0 20px;
-  text-align: start;
-  border-bottom: 2px solid #000;
-}
-
-.nature-div-card-forest-header h2, .nature-div-card-forest-header {
-  font-size: 25px;
-}
-
-.nature-div-card-forest-body {
-  background-color: #0A8754;
-  height: 347px;
-  width: 296px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-
-.nature-div-card-forest-img {
-  margin: 13px;
-  height: 150px;
-  width: 270px;
-  border-radius: 5px;
+.container-forest {
+  border: none;
+  width: 350px;
+  height: 80px;
+  background-image: url(../imgs/forest.jpg);
+  background-position-y: -120px;
   background-size: cover;
-  border: 2px solid #000;
-}
-
-.nature-div-card-forest-img img {
-  height: 100%;
-  width: 100%;
-}
-
-.nature-div-card-forest-description {
-  color: #fff;
-  margin: 0 13px;
-  font-size: 12px;
-  font-weight: 200;
-  text-align: center;
-}
-
-.nature-div-card-forest-buttom-container {
-  margin: 13px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.nature-div-card-forest-buttom-play_pause {
-  margin: 8px 0;
-  width: 200px;
-  color: #f1f1f1;
-  background-color: #004F2D;
-  border: 2px solid #000;
-  border-radius: 10px;
-  color: #fff;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 18px;
-  height: 55px;
-  transition: all 0.3s ease 0s;
-}
-
-.nature-div-card-forest-buttom-play_pause:hover {
-  background-color: rgb(255, 180, 228);
-  transform: scale(1.1);
-  color: #000;
-}
-
-.nature-div-card-forest-previous_next-buttom-container {
-  display: flex;
-  justify-content: space-around;
-}
-
-.nature-div-card-forest-buttom-next {
-  background-color: #004F2D;
-  color: #fff;
-  width: 90px;
-  height: 50px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  margin-left: 50px;
   border-radius: 50px;
-  box-shadow: #000 4px 4px 0 0;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 18px;
-  transition: all 0.3s ease 0s;
 }
 
-.nature-div-card-forest-buttom-next:hover {
-  background-color: rgb(255, 180, 228);
-  transform: scale(1.1);
-  color: #000;
-}
+/*========================================================*/
+/*====================== CARD OCEAN ======================*/
+/*========================================================*/
 
-.nature-div-card-forest-buttom-previous {
-  background-color: #004F2D;
-  color: #fff;
-  width: 90px;
-  height: 50px;
+.container-ocean {
+  border: none;
+  width: 350px;
+  height: 80px;
+  background-image: url(../imgs/ocean.jpeg);
+  background-position-y: -70px;
+  background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  margin-right: 50px;
   border-radius: 50px;
-  box-shadow: #000 4px 4px 0 0;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 18px;
-  transition: all 0.3s ease 0s;
-}
-
-.nature-div-card-forest-buttom-previous:hover {
-  background-color: rgb(255, 180, 228);
-  transform: scale(1.1);
-  color: #000;
 }
 
 
@@ -1147,13 +533,12 @@ body {
 /*=============== INTRODUCTION URBAN AREA ================*/
 /*========================================================*/
 
-
 .urban-background {
   padding: 0 8%;
   height: 650px;
-  background-color: #363946;
+  background-color: #363945;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   color: #fff;
 }
@@ -1173,291 +558,61 @@ body {
   letter-spacing: -1px;
 }
 
-
-
-
-/*========================================================*/
-/*====================== CARD CITY =======================*/
-/*========================================================*/
-
-.urban-div-card-city-container {
-  background-color: #4B4E58;
-  height: 400px;
-  width: 300px;
-  border: 2px solid #000;
-  border-radius: 20px;
-  box-shadow: #000 10px 10px 0 0;
-  color: #000;
-  font-weight: 600;
+.urban-div-cards-container {
+  width: 400px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.urban-div-card-city-header {
-  color: #fff;
-  background-color: #4B4E58;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  height: 50px;
-  width: 296px;
-  padding: 0 20px;
-  text-align: start;
-  border-bottom: 2px solid #000;
-}
-
-.urban-div-card-city-header h2, .urban-div-card-city-header {
-  font-size: 25px;
-}
-
-.urban-div-card-city-body {
-  background-color: #70798C;
-  height: 347px;
-  width: 296px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-
-.urban-div-card-city-img {
-  margin: 13px;
-  height: 150px;
-  width: 270px;
-  border-radius: 5px;
-  background-size: cover;
-  border: 2px solid #000;
-}
-
-.urban-div-card-city-img img {
-  height: 100%;
-  width: 100%;
-}
-
-
-
-.urban-div-card-city-description {
-  color: #fff;
-  margin: 0 13px;
-  font-size: 12px;
-  font-weight: 200;
-  text-align: center;
-}
-
-.urban-div-card-city-buttom-container {
-  margin: 13px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.urban-div-card-city-buttom-play_pause {
-  margin: 8px 0;
-  width: 200px;
-  color: #f1f1f1;
-  background-color: #4B4E58;
-  border: 2px solid #000;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 18px;
-  height: 55px;
-  transition: all 0.3s ease 0s;
-}
-
-.urban-div-card-city-buttom-play_pause:hover {
-  background-color: rgb(255, 180, 228);
-  transform: scale(1.1);
-  color: #000;
-}
-
-.urban-div-card-city-previous_next-buttom-container {
-  display: flex;
   justify-content: space-around;
 }
 
-.urban-div-card-city-buttom-next {
-  background-color: #4B4E58;
-  color: #fff;
-  width: 90px;
-  height: 50px;
-  border-radius: 50px;
-  box-shadow: #000 4px 4px 0 0;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 18px;
-  transition: all 0.3s ease 0s;
+.urban-div-cards-container:hover .card {
+  opacity: 0.5;
+  filter: blur(3px);
+  transition: all 0.5s ease 0s;
 }
 
-.urban-div-card-city-buttom-next:hover {
-  background-color: rgb(255, 180, 228);
+.urban-div-cards-container .card:hover {
+  opacity: 1;
+  filter: blur(0px);
   transform: scale(1.1);
-  color: #000;
-}
-
-.urban-div-card-city-buttom-previous {
-  background-color: #4B4E58;
-  color: #fff;
-  width: 90px;
-  height: 50px;
-  border-radius: 50px;
-  box-shadow: #000 4px 4px 0 0;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 18px;
-  transition: all 0.3s ease 0s;
-}
-
-.urban-div-card-city-buttom-previous:hover {
-  background-color: rgb(255, 180, 228);
-  transform: scale(1.1);
-  color: #000;
+  
 }
 
 
 
 
 /*========================================================*/
-/*=================== CARD BUSY PLACE ====================*/
+/*======================== CITY ==========================*/
 /*========================================================*/
 
-.urban-div-card-busy_place-container {
-  background-color: #4E4240;
-  height: 400px;
-  width: 300px;
-  border: 2px solid #000;
-  border-radius: 20px;
-  box-shadow: #000 10px 10px 0 0;
-  color: #000;
-  font-weight: 600;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.urban-div-card-busy_place-header {
-  color: #fff;
-  background-color: #4E4240;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  height: 50px;
-  width: 296px;
-  padding: 0 20px;
-  text-align: start;
-  border-bottom: 2px solid #000;
-}
-
-.urban-div-card-busy_place-header, .urban-div-card-busy_place-header h2 {
-  font-size: 25px;
-}
-
-.urban-div-card-busy_place-body {
-  background-color: #97827B;
-  height: 347px;
-  width: 296px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-
-.urban-div-card-busy_place-img {
-  margin: 13px;
-  height: 150px;
-  width: 270px;
-  border-radius: 5px;
+.container-city {
+  border: none;
+  width: 350px;
+  height: 80px;
+  background-image: url(../imgs/city-2.jpg);
+  background-position-y: -41px;
   background-size: cover;
-  border: 2px solid #000;
-}
-
-.urban-div-card-busy_place-img img{
-  height: 100%;
-  width: 100%;
-}
-
-
-
-.urban-div-card-busy_place-description {
-  color: #fff;
-  margin: 0 13px;
-  font-size: 12px;
-  font-weight: 200;
-  text-align: center;
-}
-
-.urban-div-card-busy_place-buttom-container {
-  margin: 13px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.urban-div-card-busy_place-buttom-play_pause {
-  margin: 8px 0;
-  width: 200px;
-  color: #f1f1f1;
-  background-color: #4E4240;
-  border: 2px solid #000;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 18px;
-  height: 55px;
-  transition: all 0.3s ease 0s;
-}
-
-.urban-div-card-busy_place-buttom-play_pause:hover {
-  background-color: rgb(255, 180, 228);
-  transform: scale(1.1);
-  color: #000;
-}
-
-.urban-div-card-busy_place-previous_next-buttom-container {
-  display: flex;
-  justify-content: space-around;
-}
-
-.urban-div-card-busy_place-buttom-next {
-  background-color: #4E4240;
-  color: #fff;
-  width: 90px;
-  height: 50px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   border-radius: 50px;
-  box-shadow: #000 4px 4px 0 0;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 18px;
-  transition: all 0.3s ease 0s;
 }
 
-.urban-div-card-busy_place-buttom-next:hover {
-  background-color: rgb(255, 180, 228);
-  transform: scale(1.1);
-  color: #000;
-}
+/*========================================================*/
+/*===================== CARD FOREST ======================*/
+/*========================================================*/
 
-.urban-div-card-busy_place-buttom-previous {
-  background-color: #4E4240;
-  color: #fff;
-  width: 90px;
-  height: 50px;
+.container-busy_place {
+  border: none;
+  width: 350px;
+  height: 80px;
+  background-image: url(../imgs/busy-place.jpg);
+  background-size: cover;
+  background-position-y: -30px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  margin-left: 50px;
   border-radius: 50px;
-  box-shadow: #000 4px 4px 0 0;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 18px;
-  transition: all 0.3s ease 0s;
 }
-
-.urban-div-card-busy_place-buttom-previous:hover {
-  background-color: rgb(255, 180, 228);
-  transform: scale(1.1);
-  color: #000;
-}
-
-
 
 
 
@@ -1478,13 +633,11 @@ body {
 
 .footer-body h2 {
   color: #f1f1f1;
-  margin: 0px;
-  font-size: 35px;
+
+  font-size: 40px;
 }
 
-.footer-p-1 {
-  font-size: 15px;
-}
+
 
 .social_medias-body img {
   width: 25px;
