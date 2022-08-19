@@ -2,6 +2,7 @@
 <html lang="en">
   
 <head>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +11,10 @@
   <title>Chillbase</title>
   
   <script src="index.js"></script>
-  <link rel="stylesheet" href="./assets/css/index.css">
+
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,35 +34,46 @@
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 
+
 </head>
-<body>
+<body id="page_body">
 
 
-  <header id="header" class="header" data-aos="fade-down" data-aos-duration="1500">
-    <h1 class="logo">CHILLBASE</h1>
-       <nav class="navigation-bar">
-        <a href="#casa" class="about aaa">Home</a>
-        <a href="#soundscapes" class="soundscapes aaa">Soundscapes</a>
-        <a href="#about" class="about aaa">About</a>
-      </nav>
-      <button class="contact-button"><a class="buttom-link" href="mailto:quadrado14@gmail.com">Contact</a></button>
-  </header>
+ 
+   
+    <header id="header" class="navigation-container" data-aos="fade-down" data-aos-duration="1500">
+      <h1 id="logo" class="logo">CHILLBASE</h1>
+        <ul class="navigation-inline">  
+          <input type="checkbox" id="check">
+          <label for="check">
+            <i class='fas fa-play'></i>
+          </label>
+          <li><a href="#home" class="about aaa">Home</a></li>
+          <li class="soundscapes-hover"><a href="#soundscapes" class="soundscapes aaa">Soundscapes</a>
+            <ul class="soundscapes-menu">
+              <li><a class="aaa" href="#weather">Weather</a></li>
+              <li><a class="aaa" href="#nature">Nature</a></li>
+              <li><a class="aaa" href="#urban">Urban</a></li>
+            </ul>
+          </li>
+          <li><a href="#about" class="about aaa">About</a></li>
+          <button class="contact-button"><a class="buttom-link" href="mailto:quadrado14@gmail.com">Contact</a></button>
+        </ul>
+        
+    </header>
+      
+  
 
     <main class="main">
-      <div id="casa" class="introduction-container" data-aos="fade-up" data-aos-duration="1200">
+      <div id="home" class="introduction-container" data-aos="fade-up" data-aos-duration="1200">
         <div class="h2-title">
+
           <h2>Meet Chillbase</h2>
         </div>
         <p>Feeling a little stressed today? Don't worry, we are here to help you!
           Chillbase is a website where you can listen to a variety of audios that will leave you in the clouds…
           So choose one of our audios, put your headphone and get ready to relax.</p>
-        <div class="buttom-start-container">
-
-          <a href="#weather">Let's get started!</a>
-
-
-         </div>
-        
+          <a class="start" href="#weather">Let's get started!</a>    
       </div>
 
 
@@ -68,7 +83,7 @@
         <!------------- BACKGROUND WAVE 1 ---------------->
         <!------------------------------------------------>
 
-      <svg class="svg-wave-1" viewBox="0 0 100 10">
+      <svg id="weather" class="svg-wave-1" viewBox="0 0 100 12">
         <defs>
              <pattern id="Wave-1"
                     x="0" y="0" width="100" height="25"
@@ -86,7 +101,7 @@
         <!---------------- WEATHER AREA ------------------>
         <!------------------------------------------------>
 
-      <div id="weather" class="weather-background">
+      <div class="weather-background bg">
         <section class="weather-div-introduction" data-aos="fade-up" data-aos-duration="1200">
           <h2 >Weather Sondscapes</h2>
           <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas maiores nemo porro optio harum? Voluptatum magnam aut, repellat omnis quasi quam voluptates possimus quisquam, doloremque aliquid dicta iure dolore harum.</p>
@@ -95,20 +110,13 @@
 
 
 
-        <section class="weather-div-cards-container" data-aos="fade-left" data-aos-duration="1200">
+        <section class="weather-div-cards-container" data-aos="fade-up" data-aos-duration="2000">
          <!------------------------------------------------>
          <!----------------- LIGHT RAIN ------------------->
          <!------------------------------------------------>
 
           <article class="container-light_rain card" id="light_rain">
-            <button class="buttom-light_rain bbb">
 
-              <ion-icon class="play_icon" name="play"></ion-icon>
-
-                
-
-              
-            </button>
           </article>  
 
 
@@ -119,13 +127,7 @@
         <!------------------------------------------------>
         
         <article class="container-heavy_rain card" id="heavy_rain">
-          <button class="buttom-heavy_rain bbb">
 
-            <ion-icon class="play_icon" name="play"></ion-icon>
-
-            
-            
-          </button>
         </article>       
         
 
@@ -136,20 +138,12 @@
         <!------------------------------------------------>
 
         <article class="container-winter_wind card" id="winter_wind">
-          <button class="buttom-winter_wind bbb">
 
-
-            <ion-icon class="play_icon" name="play"></ion-icon>
-            
-            
-          </button>
         </article>
        </section>
       </div> 
 
-      <div class="next-buttom1-container">
-        <a class="downn" href="#nature"></a>    
-      </div>
+
 
 
 
@@ -159,7 +153,7 @@
         <!-------------- BACKGROUND WAVE 2 --------------->
         <!------------------------------------------------>
 
-      <svg class="svg-wave-2" viewBox="0 0 100 20" >
+      <svg id="nature" class="svg-wave-2" viewBox="0 0 100 12" >
         <defs>
              <pattern id="Wave-2"
                     x="0" y="0" width="100" height="25"
@@ -182,7 +176,7 @@
         <!---------------- NATURE AREA ------------------>
         <!------------------------------------------------>
 
-        <div class="nature-background" id="nature">
+        <div class="nature-background bg">
           <section class="nature-div-introduction" data-aos="fade-up" data-aos-duration="1200">
             <h2 >Nature Sondscapes</h2>
             <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas maiores nemo porro optio harum? Voluptatum magnam aut, repellat omnis quasi quam voluptates possimus quisquam, doloremque aliquid dicta iure dolore harum.</p>
@@ -191,18 +185,13 @@
   
   
   
-          <section class="nature-div-cards-container" data-aos="fade-right" data-aos-duration="1200">
+          <section class="nature-div-cards-container" data-aos="fade-up" data-aos-duration="2000">
            <!------------------------------------------------>
            <!----------------- DEEP JUNGLE ------------------>
            <!------------------------------------------------>
   
             <article class="container-deep_jungle card" id="deep_jungle">
-              <button class="buttom-deep_jungle bbb">
 
-                <ion-icon class="play_icon" name="play"></ion-icon>
-            
-            
-              </button>
             </article>  
   
   
@@ -213,12 +202,7 @@
           <!------------------------------------------------>
           
           <article class="container-forest card" id="forest">
-            <button class="buttom-forest bbb">
 
-              <ion-icon class="play_icon" name="play"></ion-icon>
-            
-            
-            </button>
           </article>       
           
   
@@ -229,28 +213,19 @@
           <!------------------------------------------------>
   
           <article class="container-ocean card" id="ocean">
-            <button class="buttom-ocean bbb">
 
-              <ion-icon class="play_icon" name="play"></ion-icon>
-            
-            
-            </button>
           </article>
          </section>
         </div> 
 
-        <div class="next-buttom2-container">
-          <a class="downn" href="#urban"></a>    
-        </div>
 
 
-
-
+        
           <!------------------------------------------------>
           <!-------------- BACKGROUND WAVE 3 --------------->
           <!------------------------------------------------>
 
-      <svg class="svg-wave-3" viewBox="0 0 100 10" >
+      <svg id="urban" class="svg-wave-3" viewBox="0 0 100 12" >
         <defs>
              <pattern id="Wave-3"
                     x="0" y="0" width="100" height="25"
@@ -268,8 +243,8 @@
         <!---------------- URBAN AREA ------------------->
         <!------------------------------------------------>
 
-        <div id="urban" class="urban-background">
-          <section class="urban-div-introduction" data-aos="fade-up" data-aos-duration="1200">
+        <div class="urban-background bg">
+          <section  class="urban-div-introduction" data-aos="fade-up" data-aos-duration="1200">
             <h2>Urban Sondscapes</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas maiores nemo porro optio harum? Voluptatum magnam aut, repellat omnis quasi quam voluptates possimus quisquam, doloremque aliquid dicta iure dolore harum.</p>
           </section>
@@ -277,19 +252,13 @@
   
   
   
-          <section class="urban-div-cards-container" data-aos="fade-left" data-aos-duration="1200">
+          <section class="urban-div-cards-container" data-aos="fade-up" data-aos-duration="2000">
            <!------------------------------------------------>
            <!--------------------- CITY --------------------->
            <!------------------------------------------------>
   
             <article class="container-city card" id="city">
 
-              <button class="buttom-city bbb">
-
-                <ion-icon class="play_icon" name="play"></ion-icon>
-            
-            
-              </button>
             </article>  
   
   
@@ -300,20 +269,12 @@
           <!------------------------------------------------>
           
           <article class="container-busy_place card" id="busy_place">
-            <button class="buttom-busy_place bbb">
 
-              <ion-icon class="play_icon" name="play"></ion-icon>
-            
-            
-            </button>
           </article>       
+
          </section>
+         
         </div> 
-        <div class="next-buttom3-container">
-          <a class="downn" href="#about"></a>    
-        </div>
-
-
     </main>
 
 
@@ -324,7 +285,7 @@
           <!------------- BACKGROUND WAVE 4 ---------------->
           <!------------------------------------------------>
 
-    <svg class="svg-wave-4" viewBox="0 0 100 9.4" >
+    <svg id="about" class="svg-wave-4" viewBox="0 0 100 12" >
       <defs>
            <pattern id="Wave-4"
                   x="0" y="0" width="100" height="25"
@@ -341,17 +302,6 @@
         <h2>About</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates amet placeat ex odit omnis, porro, quis optio corrupti aliquam velit quisquam saepe ab vitae provident explicabo expedita reiciendis laboriosam? Velit?</p>
       </div>
-      <div data-aos="fade-left" data-aos-duration="3000" class="about-me-container">
-        <div class="about-me">
-
-        </div>
-
-      </div>
-
-
-
-
-
     </div>
 
 

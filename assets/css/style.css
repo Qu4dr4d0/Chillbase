@@ -1,0 +1,752 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0px;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin-top: 40px;
+  height: 100vh;
+  width: 100%;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+::selection {
+  background: rgba(214, 45, 141, 0.3);
+  color: #fff;
+}
+
+
+
+
+/*========================================================*/
+/*==================== HEADER NAV BAR ====================*/
+/*========================================================*/
+
+.navigation-container {
+  color: #fff;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 10%;
+  background-color: #24252A;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: rgba(36,28,21, 0.3) 0px 10px 10px -10px;
+  z-index: 999;
+  text-decoration: none;
+  
+
+}
+
+header a {
+  text-decoration: none;
+  color: #f1f1f1;
+  list-style: none;
+  transition: all 0.2s ease 0s;
+}
+
+header a:hover {
+  color: rgba(214, 45, 141, 1);
+}
+
+
+
+
+.checkbtn {
+  color: #fff;
+  height: 60px;
+  font-size: 30px;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+.checkbtn:hover {
+    color: rgba(214, 45, 141, 1);
+    cursor: pointer;
+}
+
+.navigation-inline {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 20px ;
+  line-height: 70px;
+  
+}
+
+.soundscapes-hover {
+  position: relative;
+  
+}
+
+.soundscapes-hover:hover .soundscapes-menu {
+  display:block;
+  
+}
+
+.soundscapes-menu {
+
+  background-color: #24252A;
+  display: none;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 210px;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+  
+}
+
+
+
+
+/*========================================================*/
+/*================= NAV BAR HOVER EFFECTS ================*/
+/*========================================================*/
+
+.home {
+  color: #fff;
+}
+
+.home:hover {
+  color: rgba(214, 45, 141, 1);
+}
+
+.home::before {
+  content: '';
+  width: 0; 
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid rgba(255, 255, 255, 1);
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 5px 3px 0;
+  transition: all 0.2s ease 0s;
+  border-bottom-color: #f1f1f1;
+}
+
+.home:hover:before {
+  border-top-color:rgba(214, 45, 141, 1);
+  transform: rotatex(180deg);
+}
+
+
+.soundscapes::before {
+  content: '';
+  width: 0; 
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid rgba(255, 255, 255, 1);;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 5px 3px 0;
+  transition: all 0.2s ease 0s;
+}
+
+
+.soundscapes:hover:before {
+  border-top-color:rgba(214, 45, 141, 1);
+  transform: rotatex(180deg);
+}
+
+.about::before {
+  content: '';
+  width: 0; 
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid rgba(255, 255, 255, 1);
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 5px 3px 0;
+  transition: all 0.2s ease 0s;
+}
+
+.about:hover:before {
+  transform: rotatey(180deg);
+  border-top-color:rgba(214, 45, 141, 1);
+  transform: rotatex(180deg);
+}
+
+
+
+ 
+/*========================================================*/
+/*==================== NAV BAR BUTTON ====================*/
+/*========================================================*/
+
+.buttom-link {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+  transition: all 0.3s ease 0s;
+}
+
+.buttom-link:hover {
+  color: rgba(214, 45, 141,1);
+}
+
+
+
+.contact-button {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 1);
+  background-color: #000;
+  border-color: rgba(255, 255, 255, 1);
+  border-radius: 50px;
+  cursor: pointer;
+  padding: 10px;
+  transition: all 0.3s ease 0s;
+}
+
+.contact-button:hover {
+  border-color: rgba(214, 45, 141, 1);
+  color:rgba(214, 45, 141,1);
+}
+
+
+
+
+/*========================================================*/
+/*================= MAIN PART INTRODUCTION ===============*/
+/*========================================================*/
+
+.introduction-container {
+  padding: 70px 8%;
+
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.h2-title {
+  font-size: 50px;
+  font-family: 'Encode Sans', sans-serif;
+  font-weight: 600;
+}
+
+.introduction-container p {
+  padding-bottom: 30px;
+  font-weight: 100;
+  font-size: 25px;
+  letter-spacing: -0.5px;
+}
+
+
+
+
+.main .start {
+  padding: 3px 8px;
+  border: 5px solid rgba(214, 45, 141,0.6);
+  border-radius: 20px;
+  text-decoration: none;
+  color: rgba(214, 45, 141,0.6);
+  font-weight: 600;
+  text-align: center;
+  font-size: large;
+  transition: all 0.4s ease 0s;
+  z-index: 2;
+}
+
+.main .start:hover {
+  color: rgba(214, 45, 141, 1) ;
+  border-color: rgba(214, 45, 141, 1);
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+
+.svg-wave-1 {
+  background-color: #fff;
+  margin-bottom: -10px;
+}
+
+.svg-wave-2 {
+  background-color: #67BC48;
+  margin-bottom: -10px;
+  transform: rotatex(180deg);
+}
+
+.svg-wave-3 {
+  background-color: #363946;
+  margin-bottom: -10px;
+  transform: rotatex(180deg);
+}
+
+.svg-wave-4 {
+  background-color: #363946;
+  margin-bottom: -10px;
+} 
+
+
+
+
+
+
+/*========================================================*/
+/*====================== MAIN PART =======================*/
+/*========================================================*/
+/*========================================================*/
+/*========================================================*/
+/*============== INTRODUCTION WEATHER AREA ===============*/
+/*========================================================*/
+
+.cards {
+  cursor: pointer;
+}
+
+.weather-background {
+  padding: 0 8%;
+  background-color: #1B91A1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+.weather-div-introduction {
+  max-width: 400px;
+  text-align: justify;
+}
+
+.weather-div-introduction h2 {
+  font-size: 70px;
+  line-height: 60px;
+}
+
+.weather-div-introduction p {
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: -1px;
+}
+
+
+.weather-div-cards-container {
+  gap: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.weather-div-cards-container:hover .card {
+  opacity: 0.5;
+  filter: blur(3px);
+  transition: all 0.5s ease 0s;
+}
+
+.weather-div-cards-container .card:hover {
+  opacity: 1;
+  filter: blur(0px);
+  transform: scale(1.1);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*========================================================*/
+/*=================== CARD LIGHT RAIN ====================*/
+/*========================================================*/
+
+.container-light_rain {
+  border: none;
+  width: 350px;
+  height: 80px;
+  background-image: url(../imgs/light-rain.jpg);
+  background-position-y: -55px;
+  background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 50px;
+}
+
+/*========================================================*/
+/*=================== CARD HEAVY RAIN ====================*/
+/*========================================================*/
+
+.container-heavy_rain {
+  border: none;
+  width: 350px;
+  height: 80px;
+  background-image: url(../imgs/heavy-rain.jpg);
+  background-position-y: -100px;
+  background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  margin-left: 50px;
+  border-radius: 50px;
+}
+
+/*========================================================*/
+/*=================== CARD WINTER WIND ===================*/
+/*========================================================*/
+
+.container-winter_wind {
+  border: none;
+  width: 350px;
+  height: 80px;
+  background-image: url(../imgs/winter.jpg);
+  background-position-y: -5px;
+  background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  margin-right: 50px;
+  border-radius: 50px;
+}
+
+
+
+/*========================================================*/
+/*=============== INTRODUCTION NATURE AREA ===============*/
+/*========================================================*/
+
+.nature-background {
+  padding: 0 8%;
+  background-color: #67BC48;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+.nature-div-introduction {
+  max-width: 400px;
+  text-align: justify;
+}
+
+.nature-div-introduction h2 {
+  font-size: 70px;
+  line-height: 60px;
+}
+
+.nature-div-introduction p {
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: -1px;
+}
+
+.nature-div-cards-container {
+  gap: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nature-div-cards-container:hover .card {
+  opacity: 0.5;
+  filter: blur(3px);
+  transition: all 0.5s ease 0s;
+}
+
+.nature-div-cards-container .card:hover {
+  opacity: 1;
+  filter: blur(0px);
+  transform: scale(1.1);
+  
+}
+
+
+
+
+/*========================================================*/
+/*================== CARD DEEP JUNGLE ====================*/
+/*========================================================*/
+
+.container-deep_jungle {
+  border: none;
+  width: 350px;
+  height: 80px;
+  background-image: url(../imgs/jungle.jpg);
+  background-position-y: -40px;
+  background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 50px;
+}
+
+/*========================================================*/
+/*===================== CARD FOREST ======================*/
+/*========================================================*/
+
+.container-forest {
+  border: none;
+  width: 350px;
+  height: 80px;
+  background-image: url(../imgs/forest.jpg);
+  background-position-y: -120px;
+  background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  margin-left: 50px;
+  border-radius: 50px;
+}
+
+/*========================================================*/
+/*====================== CARD OCEAN ======================*/
+/*========================================================*/
+
+.container-ocean {
+  border: none;
+  width: 350px;
+  height: 80px;
+  background-image: url(../imgs/ocean.jpeg);
+  background-position-y: -70px;
+  background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  margin-right: 50px;
+  border-radius: 50px;
+}
+
+
+
+
+/*========================================================*/
+/*=============== INTRODUCTION URBAN AREA ================*/
+/*========================================================*/
+
+.urban-background {
+  padding: 0 8%;
+  background-color: #363945;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+.urban-div-introduction {
+  max-width: 400px;
+  text-align: justify;
+}
+
+.urban-div-introduction h2 {
+  font-size: 70px;
+  line-height: 60px;
+}
+
+.urban-div-introduction p {
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: -1px;
+}
+
+.urban-div-cards-container {
+  gap: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.urban-div-cards-container:hover .card {
+  opacity: 0.5;
+  filter: blur(3px);
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.urban-div-cards-container .card:hover {
+  opacity: 1;
+  filter: blur(0px);
+  transform: scale(1.1);
+  
+}
+
+
+
+
+/*========================================================*/
+/*======================== CITY ==========================*/
+/*========================================================*/
+
+.container-city {
+  border: none;
+  width: 350px;
+  height: 80px;
+  background-image: url(../imgs/city-2.jpg);
+  background-position-y: -41px;
+  background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 50px;
+}
+
+/*========================================================*/
+/*======================== ABOUT =========================*/
+/*========================================================*/
+
+.container-busy_place {
+  border: none;
+  width: 350px;
+  height: 80px;
+  background-image: url(../imgs/busy-place.jpg);
+  background-size: cover;
+  background-position-y: -30px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  margin-left: 50px;
+  border-radius: 50px;
+}
+
+
+.about-container {
+  color: #fff;
+  background-color: #762C44;
+  padding: 0 8% 150px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+  align-items: center;
+}
+
+.about-container .about-text {
+  max-width: 700px;
+}
+
+.about-text h2 {
+  text-align: center;
+  font-size: 70px;
+  line-height: 60px;
+}
+
+.about-text p {
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: -1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*========================================================*/
+/*======================== FOOTER?? ========================*/
+/*========================================================*/
+
+.footer-body {
+  color: #f1f1f1;
+  background-color: #0f0f0f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footer-body h2 {
+  color: #f1f1f1;
+
+  font-size: 40px;
+}
+
+
+
+.social_medias-body img {
+  width: 25px;
+  height: 25px;
+}
+
+.social_medias-body {
+  margin: 0 10px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content:center;
+  gap: 15px;
+}
+
+.footer-p-2 {
+  color: #5d5d64;
+}
+.rainbow{
+  animation: rainbow 2.5s linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rainbow{
+  100%,0%{
+    color: rgb(255,0,0);
+  }
+  8%{
+    color: rgb(255,127,0);
+  }
+  16%{
+    color: rgb(255,255,0);
+  }
+  25%{
+    color: rgb(127,255,0);
+  }
+  33%{
+    color: rgb(0,255,0);
+  }
+  41%{
+    color: rgb(0,255,127);
+  }
+  50%{
+    color: rgb(0,255,255);
+  }
+  58%{
+    color: rgb(0,127,255);
+  }
+  66%{
+    color: rgb(0,0,255);
+  }
+  75%{
+    color: rgb(127,0,255);
+  }
+  83%{
+    color: rgb(255,0,255);
+  }
+  91%{
+    color: rgb(255,0,127);
+  }
+}
+
+
+
+
+
+
+

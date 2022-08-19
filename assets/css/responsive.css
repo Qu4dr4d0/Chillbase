@@ -1,0 +1,188 @@
+@media (max-width: 1050px) {
+  body {
+    text-align: center;
+  } 
+
+  .bg {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto;
+    grid-row: 1fr 1fr;
+    gap: 50px;
+    padding-bottom: 30px;
+  }
+
+  .weather-div-introduction {
+    align-items: center;
+    max-width: 900px;
+    text-align: center;
+  }
+
+  .weather-div-cards-container {
+    gap: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+
+
+    /*========================================================*/
+
+
+  .nature-div-introduction {
+    align-items: center;
+    max-width: 900px;
+    text-align: center;
+  }
+
+  .nature-div-cards-container {
+    gap: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  /*========================================================*/
+
+
+  .urban-div-introduction {
+    align-items: center;
+    max-width: 900px;
+    text-align: center;
+  }
+
+  .urban-div-cards-container {
+    gap: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+
+  .card {
+    margin: 0;
+    
+  }
+
+}
+
+@media (max-width: 800px) {
+  .navigation-inline {
+    display: none;
+  }
+}
+
+
+@media (max-width: 500px) {
+
+  .navigation-inline {
+    display: none;
+  }
+
+  #logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .card {
+    max-width: 300px;
+  }
+
+  .introduction-container {
+    padding: 0 8%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .introduction-container h2 {
+    margin-top: 80px;
+    font-size: 50px;
+  }
+
+  .introduction-container p {
+    font-size: medium;
+  }
+
+  .introduction-container .a {
+    font-size: small;
+  }
+
+
+
+
+  .weather-div-introduction h2 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  
+  .weather-div-introduction p {
+    font-size: medium;
+    font-weight: 200;
+    letter-spacing: -1px;
+  }
+
+
+
+
+  
+  .nature-div-introduction h2 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  
+  .nature-div-introduction p {
+    font-size: medium;
+    font-weight: 200;
+    letter-spacing: -1px;
+  }
+
+
+
+
+
+
+  .urban-div-introduction h2 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  
+  .urban-div-introduction p {
+    font-size: medium;
+    font-weight: 200;
+    letter-spacing: -1px;
+  }
+
+
+
+
+
+  .about-container h2 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  
+  .about-container p {
+    font-size: medium;
+    font-weight: 200;
+    letter-spacing: -1px;
+  }
+
+
+
+
+
+
+
+
+}
