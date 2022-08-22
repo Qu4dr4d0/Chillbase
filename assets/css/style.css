@@ -60,6 +60,11 @@ header a:hover {
   color: rgba(214, 45, 141, 1);
 }
 
+#logo {
+  font-size: 30px;
+  cursor: pointer;
+}
+
 
 
 
@@ -93,6 +98,7 @@ header a:hover {
   
 }
 
+
 .soundscapes-hover:hover .soundscapes-menu {
   display:block;
   
@@ -109,6 +115,22 @@ header a:hover {
   border-bottom-left-radius: 5%;
   border-bottom-right-radius: 5%;
   
+}
+
+.aa1 {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.aa1:hover, .aa1:focus, .aa1:active {
+  -webkit-transform: translateX(8px);
+  transform: translateX(8px);
 }
 
 
@@ -276,6 +298,22 @@ header a:hover {
   transform: scale(1.1);
 }
 
+.start {
+  animation: scale 2s linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes scale {
+  
+  100%,0% {
+    transform: scale(1.0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+
+}
+
 
 
 
@@ -317,18 +355,21 @@ header a:hover {
 /*============== INTRODUCTION WEATHER AREA ===============*/
 /*========================================================*/
 
-.cards {
-  cursor: pointer;
+.card {
+  display: flex;
+  justify-content: center;
+  transition: all 0.5s ease 0s;
 }
 
 .weather-background {
   padding: 0 8%;
   background-color: #1B91A1;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto;
   align-items: center;
+  justify-content: center;
   color: #fff;
-  flex-wrap: wrap;
+
 }
 
 .weather-div-introduction {
@@ -350,10 +391,9 @@ header a:hover {
 
 .weather-div-cards-container {
   gap: 25px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+
+
 }
 
 
@@ -369,6 +409,35 @@ header a:hover {
   transform: scale(1.1);
 
 }
+
+.toggle {
+  border: none;
+  background-color: transparent;
+  place-self: center;
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+  transition: all 0.5s ease-out 0s;
+  display: flex;
+  align-items: center;
+}
+
+
+.toggle .icon {
+  font-size: 64px;
+  color: transparent;
+  transform: translateY(-15px);
+  transition: 0.6s;
+}
+
+.card:hover .toggle .icon{
+  color: #fff;
+  transform: translateY(0px);
+}
+
+
+
+
 
 
 
@@ -440,17 +509,16 @@ header a:hover {
 .nature-background {
   padding: 0 8%;
   background-color: #67BC48;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   color: #fff;
-  flex-wrap: wrap;
 }
 
 .nature-div-introduction {
   max-width: 400px;
   text-align: justify;
+  place-self: end;
 }
 
 .nature-div-introduction h2 {
@@ -468,7 +536,7 @@ header a:hover {
   gap: 25px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  
   justify-content: space-between;
 }
 
@@ -545,11 +613,12 @@ header a:hover {
 .urban-background {
   padding: 0 8%;
   background-color: #363945;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto;
   align-items: center;
+  justify-content: center;
   color: #fff;
-  flex-wrap: wrap;
+
 }
 
 .urban-div-introduction {
@@ -629,10 +698,10 @@ header a:hover {
   background-color: #762C44;
   padding: 0 8% 150px;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  text-align: justify;
+  display: grid;
+  grid-template-columns: auto;
   align-items: center;
+  justify-content: center;
 }
 
 .about-container .about-text {

@@ -10,7 +10,7 @@
 
   <title>Chillbase</title>
   
-  <script src="index.js"></script>
+  <script src="./assets/js/index.js"></script>
 
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/style.css">
@@ -42,7 +42,7 @@
  
    
     <header id="header" class="navigation-container" data-aos="fade-down" data-aos-duration="1500">
-      <h1 id="logo" class="logo">CHILLBASE</h1>
+      <a href="https://qu4dr4d0.github.io/Chillbase/" id="logo" class="logo">CHILLBASE</a>
         <ul class="navigation-inline">  
           <input type="checkbox" id="check">
           <label for="check">
@@ -51,9 +51,9 @@
           <li><a href="#home" class="about aaa">Home</a></li>
           <li class="soundscapes-hover"><a href="#soundscapes" class="soundscapes aaa">Soundscapes</a>
             <ul class="soundscapes-menu">
-              <li><a class="aaa" href="#weather">Weather</a></li>
-              <li><a class="aaa" href="#nature">Nature</a></li>
-              <li><a class="aaa" href="#urban">Urban</a></li>
+              <li><a class="aaa aa1" href="#weather">Weather</a></li>
+              <li><a class="aaa aa1" href="#nature">Nature</a></li>
+              <li><a class="aaa aa1" href="#urban">Urban</a></li>
             </ul>
           </li>
           <li><a href="#about" class="about aaa">About</a></li>
@@ -115,7 +115,10 @@
          <!----------------- LIGHT RAIN ------------------->
          <!------------------------------------------------>
 
-          <article class="container-light_rain card" id="light_rain">
+          <article class="container-light_rain card">
+            <button  class="toggle" onclick="light()">
+              <ion-icon class="icon" name="play"></ion-icon>
+            </button>
 
           </article>  
 
@@ -126,8 +129,10 @@
         <!----------------- HEAVY RAIN ------------------->
         <!------------------------------------------------>
         
-        <article class="container-heavy_rain card" id="heavy_rain">
-
+        <article class="container-heavy_rain card">
+          <button  class="toggle" onclick="heavy()">
+            <ion-icon class="icon" name="play"></ion-icon>
+          </button>
         </article>       
         
 
@@ -137,8 +142,10 @@
         <!----------------- WINTER WIND ------------------>
         <!------------------------------------------------>
 
-        <article class="container-winter_wind card" id="winter_wind">
-
+        <article class="container-winter_wind card">
+          <button  class="toggle" onclick="winter()">
+            <ion-icon class="icon" name="play"></ion-icon>
+          </button>
         </article>
        </section>
       </div> 
@@ -177,11 +184,7 @@
         <!------------------------------------------------>
 
         <div class="nature-background bg">
-          <section class="nature-div-introduction" data-aos="fade-up" data-aos-duration="1200">
-            <h2 >Nature Sondscapes</h2>
-            <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas maiores nemo porro optio harum? Voluptatum magnam aut, repellat omnis quasi quam voluptates possimus quisquam, doloremque aliquid dicta iure dolore harum.</p>
-          </section>
-  
+
   
   
   
@@ -190,8 +193,10 @@
            <!----------------- DEEP JUNGLE ------------------>
            <!------------------------------------------------>
   
-            <article class="container-deep_jungle card" id="deep_jungle">
-
+            <article class="container-deep_jungle card">
+              <button  class="toggle" onclick="jungle()">
+                <ion-icon class="icon" name="play"></ion-icon>
+              </button>
             </article>  
   
   
@@ -201,9 +206,11 @@
           <!------------------- FOREST --------------------->
           <!------------------------------------------------>
           
-          <article class="container-forest card" id="forest">
-
-          </article>       
+            <article class="container-forest card">
+              <button  class="toggle" onclick="forest()">
+                <ion-icon class="icon" name="play"></ion-icon>
+              </button>
+            </article>       
           
   
   
@@ -212,10 +219,17 @@
           <!------------------- OCEAN ---------------------->
           <!------------------------------------------------>
   
-          <article class="container-ocean card" id="ocean">
+            <article type="button"  class="container-ocean card">
+              <button  class="toggle" onclick="ocean()">
+                <ion-icon class="icon" name="play"></ion-icon>
+              </button>
+            </article>
 
-          </article>
-         </section>
+          </section>
+          <section class="nature-div-introduction" data-aos="fade-up" data-aos-duration="1200">
+            <h2 >Nature Sondscapes</h2>
+            <p >Renew your inward peace and emotional health with Nature Soundscapes. Soak up the tranquil atmosphere and listen to the relaxing mix of soothing birds chirping and water sounds.</p>
+          </section>
         </div> 
 
 
@@ -257,8 +271,10 @@
            <!--------------------- CITY --------------------->
            <!------------------------------------------------>
   
-            <article class="container-city card" id="city">
-
+            <article class="container-city card">
+              <button  class="toggle" onclick="city()">
+                <ion-icon class="icon" name="play"></ion-icon>
+              </button>
             </article>  
   
   
@@ -268,8 +284,10 @@
           <!----------------- BUSY PLACE ------------------->
           <!------------------------------------------------>
           
-          <article class="container-busy_place card" id="busy_place">
-
+          <article class="container-busy_place card">
+            <button  class="toggle" onclick="busy()">
+              <ion-icon class="icon" name="play"></ion-icon>
+            </button>
           </article>       
 
          </section>
