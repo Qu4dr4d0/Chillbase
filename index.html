@@ -42,7 +42,7 @@
  
    
     <header id="header" class="navigation-container" data-aos="fade-down" data-aos-duration="1500">
-      <a href="https://qu4dr4d0.github.io/Chillbase/" id="logo" class="logo">CHILLBASE</a>
+      <a onclick="stopAll()" id="logo" class="logo">CHILLBASE</a>
         <ul class="navigation-inline">  
           <input type="checkbox" id="check">
           <label for="check">
@@ -73,7 +73,7 @@
         <p>Feeling a little stressed today? Don't worry, we are here to help you!
           Chillbase is a website where you can listen to a variety of audios that will leave you in the clouds…
           So choose one of our audios, put your headphone and get ready to relax.</p>
-          <a class="start" href="#weather">Let's get started!</a>    
+        <a class="start" href="#weather">Let's get started!</a>    
       </div>
 
 
@@ -116,7 +116,7 @@
          <!------------------------------------------------>
 
           <article class="container-light_rain card">
-            <button  class="toggle" onclick="light()">
+            <button  class="toggle" onclick="lightRain()">
               <ion-icon class="icon" name="play"></ion-icon>
             </button>
 
@@ -130,7 +130,7 @@
         <!------------------------------------------------>
         
         <article class="container-heavy_rain card">
-          <button  class="toggle" onclick="heavy()">
+          <button  class="toggle" onclick="heavyRain()">
             <ion-icon class="icon" name="play"></ion-icon>
           </button>
         </article>       
@@ -194,7 +194,7 @@
            <!------------------------------------------------>
   
             <article class="container-deep_jungle card">
-              <button  class="toggle" onclick="jungle()">
+              <button onclick="jungle()" class="toggle">
                 <ion-icon class="icon" name="play"></ion-icon>
               </button>
             </article>  
@@ -285,7 +285,7 @@
           <!------------------------------------------------>
           
           <article class="container-busy_place card">
-            <button  class="toggle" onclick="busy()">
+            <button  class="toggle" onclick="busyPlace()">
               <ion-icon class="icon" name="play"></ion-icon>
             </button>
           </article>       
