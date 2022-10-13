@@ -25,6 +25,10 @@ body {
 
 
 
+
+
+
+
 /*========================================================*/
 /*==================== HEADER NAV BAR ====================*/
 /*========================================================*/
@@ -369,7 +373,6 @@ header a:hover {
   align-items: center;
   justify-content: center;
   color: #fff;
-
 }
 
 .weather-div-introduction {
@@ -669,7 +672,7 @@ header a:hover {
   border: none;
   width: 350px;
   height: 80px;
-  background-image: url(../imgs/city-2.jpg);
+  background-image: url(../imgs/city.jpg);
   background-position-y: -41px;
   background-size: cover;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -732,7 +735,7 @@ header a:hover {
 
 
 /*========================================================*/
-/*======================== FOOTER?? ========================*/
+/*======================== FOOTER ========================*/
 /*========================================================*/
 
 .footer-body {
@@ -772,6 +775,7 @@ header a:hover {
 .rainbow{
   animation: rainbow 2.5s linear;
   animation-iteration-count: infinite;
+  text-decoration: none;
 }
 
 @keyframes rainbow{

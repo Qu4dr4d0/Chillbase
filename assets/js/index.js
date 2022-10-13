@@ -1,3 +1,4 @@
+
 const audioLightRain = new Audio('./assets/audios/light-rain.mp3')
 const audioHeavyRain = new Audio('./assets/audios/heavy-rain.mp3')
 const audioWinter = new Audio('./assets/audios/winter-wind.mp3')
