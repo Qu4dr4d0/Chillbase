@@ -1,4 +1,4 @@
-# Prototipo Chillbse - João Vitor Quadrado
+# Prototipo Chillbase - João Vitor Quadrado
 
 https://Qu4dr4d0.github.io/Chillbase/
 
